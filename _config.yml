@@ -1,0 +1,46 @@
+title: Frank Romero Studio
+description: >- # this means to ignore newlines until "baseurl:"
+  Chicano artist Frank Ramero's official website.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.frankromero.art" # the base hostname & protocol for your site
+enforce_ssl: "www.frankromero.art"
+twitter: 
+  username: heartsbeach
+
+exclude: [
+  'Gemfile',
+  'Gemfile.lock',
+  'README.md'
+]
+
+# Build settings
+markdown: kramdown
+
+plugins:
+  - jekyll-feed
+  - jekyll-autoprefixer
+  - jekyll-seo-tag
+
+
+# env: production
+
+# stitch:
+#   dependencies: 
+#     - 'js/jquery.min.js'
+#     - 'js/bootstrap.min.js'
+#     - 'js/site.js'
+#     - 'js/prism.min.js'
+#     - 'js/clipboard.js'
+#     - 'js/anchor.min.js'
+#     - 'js/modernizr.custom.js'
+#     - 'js/masonry.pkgd.min.js'
+#     - 'js/imagesloaded.js'
+#     - 'js/classie.js'
+#     - 'js/AnimOnScroll.js'
+#     - 'js/photoswipe.js'
+#     - 'js/photoswipe-ui-default.js'
+#   output: 'js/main.min.js'
+#   fingerprint: false
+#   cleanup: true
+#   uglify: true
+#   uglify_options: {}  
