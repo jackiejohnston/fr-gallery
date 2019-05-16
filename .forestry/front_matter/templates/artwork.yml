@@ -99,6 +99,13 @@ fields:
     max: ''
     step: 
   description: This will only be displayed for pieces marked as available.
+- name: private_collection
+  type: text
+  config:
+    required: false
+  label: Private collection
+  description: 'Complete this sentence: "In the collection of ..." (Do not fill out
+    if it''s in a museum, gallery, public art or in the collection of the artist.)'
 - name: address
   type: text
   config:
