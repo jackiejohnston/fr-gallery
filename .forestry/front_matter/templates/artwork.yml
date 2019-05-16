@@ -1,4 +1,135 @@
 ---
 label: artwork
 hide_body: true
-fields: []
+fields:
+- name: image
+  type: file
+  config:
+    maxSize: '250'
+  label: Image
+  description: Upload the highest resolution jpeg you have available up to 250MB.
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+  description: Title of the artwork. If this is a set of prints be sure the title
+    is exactly the same as the original so they'll be linked.
+- name: media
+  type: text
+  config:
+    required: false
+  label: Media
+  description: What media is the artwork? (Acrylic on canvas, serigraph on paper,
+    etc.)
+- name: original
+  type: boolean
+  label: Original
+  description: Is this the original artwork?
+  default: false
+- name: year
+  type: number
+  label: Year
+  description: Year original artwork was created or year multiples were printed/signed.
+  default: 0
+  required: true
+  config:
+    min: '1940'
+    max: '3000'
+    step: '1'
+    required: true
+- name: width
+  type: number
+  label: Width
+  description: Width of artwork in inches
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
+- name: height
+  type: number
+  label: Height
+  description: Height of artwork in inches
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
+- name: depth
+  type: number
+  label: Depth
+  description: Depth of artwork in inches. Only fill in if it's 3-D art.
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+- name: availability
+  type: select
+  default: Collection of the artist
+  config:
+    required: true
+    options:
+    - Collection of the artist
+    - Private collection
+    - Permanent museum collection
+    - Public art
+    - Available from artist
+    - Available from a gallery
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Availability
+  description: Only answer available if the piece is for sale.
+- name: price
+  type: number
+  label: Price
+  default: 0
+  required: true
+  config:
+    min: ''
+    max: ''
+    step: 
+  description: This will only be displayed for pieces marked as available.
+- name: address
+  type: text
+  config:
+    required: false
+  label: Address
+  description: Only fill in if it's public art
+- name: edition_size
+  type: number
+  label: Edition Size
+  description: How many in this edition? (If it's an original, it should be 1.)
+  default: '1'
+  required: true
+  config:
+    min: '1'
+    max: '1000'
+    step: '1'
+- name: in_stock
+  type: number
+  label: In Stock
+  description: How many are in stock and available for sale from the artist? (Put
+    zero if it's only available from a gallery.)
+  default: 0
+  required: true
+  config:
+    min: '0'
+    max: '1000'
+    step: '1'
+    required: true
+- name: note
+  type: text
+  config:
+    required: false
+  label: Note
+  description: Any extra info about the piece that's important to share.
