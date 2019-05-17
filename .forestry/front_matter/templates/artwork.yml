@@ -2,6 +2,13 @@
 label: artwork
 hide_body: true
 fields:
+- name: layout
+  type: text
+  config:
+    required: false
+  label: Layout
+  hidden: true
+  default: art
 - name: image
   type: file
   config:
@@ -140,3 +147,9 @@ fields:
     required: false
   label: Note
   description: Any extra info about the piece that's important to share.
+- name: description
+  type: text
+  config:
+    required: false
+  label: Description
+  description: Any additional information about the piece.
