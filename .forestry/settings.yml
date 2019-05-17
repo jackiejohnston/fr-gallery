@@ -12,11 +12,6 @@ sections:
   new_doc_ext: html
   templates:
   - artwork
-- type: directory
-  path: _data
-  label: Data
-  create: none
-  match: "**/*"
 - type: jekyll-pages
   label: Pages
   create: all
