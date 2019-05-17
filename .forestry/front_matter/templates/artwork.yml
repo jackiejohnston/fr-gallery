@@ -18,7 +18,7 @@ fields:
 - name: media
   type: text
   config:
-    required: false
+    required: true
   label: Media
   description: What media is the artwork? (Acrylic on canvas, serigraph on paper,
     etc.)
