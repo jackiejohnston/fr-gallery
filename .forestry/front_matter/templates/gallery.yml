@@ -14,3 +14,5 @@ fields:
     required: false
   label: Website
   description: The gallery's website address.
+pages:
+- _data/galleries.yml
