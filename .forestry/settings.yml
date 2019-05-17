@@ -9,7 +9,7 @@ sections:
   label: Artwork
   create: documents
   match: "**/*"
-  new_doc_ext: ".html"
+  new_doc_ext: html
   templates:
   - artwork
 - type: directory
