@@ -153,3 +153,5 @@ fields:
     required: false
   label: Description
   description: Any additional information about the piece.
+pages:
+- artwork/the-arrest-of-the-paleteros.html
