@@ -101,7 +101,8 @@ fields:
       file: 
       path: 
   label: Availability
-  description: Only answer available if the piece is for sale.
+  description: Only answer available if the piece is for sale. If it's available from
+    both artist and gallery, put artist.
 - name: private_collection
   type: text
   config:
