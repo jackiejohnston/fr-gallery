@@ -22,6 +22,12 @@ fields:
   label: Title
   description: Title of the artwork. If this is a set of prints be sure the title
     is exactly the same as the original so they'll be linked.
+- name: description
+  type: text
+  config:
+    required: false
+  label: Description
+  description: Any additional information about the piece.
 - name: media
   type: text
   config:
@@ -111,8 +117,9 @@ fields:
   config:
     required: false
   label: Private collection
-  description: 'Complete this sentence: "In the collection of ..." (Do not fill out
-    if it''s in a museum, gallery, public art or in the collection of the artist.)'
+  description: What is the name of the person or organization who owns this piece.
+    (Do not fill out if it's in a museum, gallery, public art or in the collection
+    of the artist.)
 - name: address
   type: text
   config:
@@ -147,11 +154,5 @@ fields:
     required: false
   label: Note
   description: Any extra info about the piece that's important to share.
-- name: description
-  type: text
-  config:
-    required: false
-  label: Description
-  description: Any additional information about the piece.
 pages:
 - artwork/the-arrest-of-the-paleteros.html
