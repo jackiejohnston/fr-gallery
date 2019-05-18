@@ -9,6 +9,13 @@ fields:
   label: Layout
   hidden: true
   default: art
+- name: slug
+  type: text
+  config:
+    required: false
+  label: Slug
+  hidden: true
+  description: Add slug if title contains special characters
 - name: image
   type: file
   config:
