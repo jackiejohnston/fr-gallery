@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: #e97aad;">
+  <a class="navbar-brand text-uppercase mt-1" href="{{ '/' | relative_url }}">
+    <img src="/android-chrome-512x512.png" width="30" height="30" class="d-inline-block align-top mr-2 pb-1" alt="Frank Romero">
+    Frank Romero
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbar-links">
+    <ul class="navbar-nav ml-auto">
+      {% for item in site.menus.header %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ item.url }}" title="Go to {{ item.title }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+      <li>
+        <a class="nav-link" href="https://www.facebook.com/FrankEdwardRomero/" target="_blank"><i class="fab fa-facebook-square fa-lg" title="Facebook"></i></a>
+      </li>
+      <li>
+        <a class="nav-link" href="https://www.instagram.com/frankromeroartist/" target="_blank"><i class="fab fa-instagram fa-lg" title="Instagram"></i></a>
+      </li>
+    </ul>
+  </div>
+</nav>

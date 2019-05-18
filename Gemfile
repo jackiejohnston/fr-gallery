@@ -13,6 +13,7 @@ group :jekyll_plugins do
   gem "uglifier"
   gem "jekyll-autoprefixer"
   gem "jekyll-seo-tag"
+  gem "jekyll-menus"
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

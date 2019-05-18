@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: artwork
+  path: _artwork
   label: Artwork
   create: documents
   match: "**/*"
