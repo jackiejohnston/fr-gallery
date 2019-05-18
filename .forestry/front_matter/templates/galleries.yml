@@ -2,15 +2,15 @@
 label: galleries
 hide_body: true
 fields:
-- name: name
+- name: title
   type: text
   config:
     required: true
-  label: Name
+  label: Title
   description: Name of the gallery
 - name: website
   type: text
   config:
     required: false
   label: Website
-  description: Gallery's website address
+  description: The website address of the gallery
