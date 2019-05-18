@@ -1,4 +1,6 @@
 ---
--   title: Smithsonian American Art Museum
-    website: https://americanart.si.edu/artist/frank-romero-6213
+museums:
+  Smithsonian American Art Museum:
+    name = "Smithsonian American Art Museum"
+    website = "https://americanart.si.edu/artist/frank-romero-6213"
 ---
