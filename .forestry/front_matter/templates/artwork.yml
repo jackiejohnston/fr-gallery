@@ -29,12 +29,6 @@ fields:
   label: Title
   description: Title of the artwork. If this is a set of prints be sure the title
     is exactly the same as the original so they'll be linked.
-- name: description
-  type: text
-  config:
-    required: false
-  label: Description
-  description: Any additional information about the piece.
 - name: media
   type: text
   config:
@@ -42,6 +36,16 @@ fields:
   label: Media
   description: What media is the artwork? (Acrylic on canvas, serigraph on paper,
     etc.)
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
+  description: Caption information that would go on an exhibit label.
 - name: original
   type: boolean
   label: Original
