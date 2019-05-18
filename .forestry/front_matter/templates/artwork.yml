@@ -193,4 +193,5 @@ fields:
   label: Note
   description: Any extra info about the piece that's important to share.
 pages:
+- _artwork/the-closing-of-whittier-blvd.html
 - _artwork/death-of-rubén-salazar.html
