@@ -1,4 +1,16 @@
 ---
 label: museums
 hide_body: true
-fields: []
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Name
+  description: The name of the museum
+- name: website
+  type: text
+  config:
+    required: false
+  label: Website
+  description: The website address of the museum.
