@@ -14,5 +14,3 @@ fields:
     required: false
   label: Website
   description: The website address of the museum
-pages:
-- _museums/smithsonian-american-art-museum.html
