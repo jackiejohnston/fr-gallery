@@ -1,4 +1,16 @@
 ---
 label: galleries
 hide_body: true
-fields: []
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Name
+  description: Name of the gallery
+- name: website
+  type: text
+  config:
+    required: false
+  label: Website
+  description: Gallery's website address
