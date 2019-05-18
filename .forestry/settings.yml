@@ -9,7 +9,7 @@ sections:
   label: Museums
   create: documents
   match: "**/*"
-  new_doc_ext: ".html"
+  new_doc_ext: html
   templates:
   - museums
 - type: directory
@@ -17,9 +17,9 @@ sections:
   label: Galleries
   create: documents
   match: "**/*"
-  new_doc_ext: ".html"
+  new_doc_ext: html
   templates:
-  - galleries  
+  - galleries
 - type: directory
   path: _artwork
   label: Artwork
