@@ -118,6 +118,19 @@ fields:
   description: What is the name of the person or organization who owns this piece.
     (Do not fill out if it's in a museum, gallery, public art or in the collection
     of the artist.)
+- name: museum_collection
+  type: select
+  default: ''
+  config:
+    required: false
+    options: []
+    source:
+      type: documents
+      section: data
+      file: _data/museums.yml
+      path: museums
+  label: Museum Collection
+  description: If artwork is part of a museum collection, select which one
 - name: price
   type: number
   label: Price
