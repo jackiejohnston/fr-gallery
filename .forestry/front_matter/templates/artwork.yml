@@ -125,10 +125,10 @@ fields:
     required: false
     options: []
     source:
-      type: documents
-      section: data
+      type: pages
+      section: museums
       file: _data/museums.yml
-      path: museums
+      path: ''
   label: Museum Collection
   description: If artwork is part of a museum collection, select which one
 - name: price
