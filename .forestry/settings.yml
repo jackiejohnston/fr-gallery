@@ -1,25 +1,15 @@
 ---
-new_page_extension: md
+new_page_extension: html
 auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
 - type: directory
-  path: _museums
-  label: Museums
+  path: _data
+  label: Data
   create: documents
   match: "**/*"
-  new_doc_ext: html
-  templates:
-  - museums
-- type: directory
-  path: _galleries
-  label: Galleries
-  create: documents
-  match: "**/*"
-  new_doc_ext: html
-  templates:
-  - galleries
+  new_doc_ext: yml
 - type: directory
   path: _artwork
   label: Artwork
