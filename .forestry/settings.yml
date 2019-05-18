@@ -13,11 +13,13 @@ sections:
   templates:
   - gallery
 - type: directory
-  path: _data
-  label: Data
+  path: _museums
+  label: Museums
   create: documents
   match: "**/*"
-  new_doc_ext: yml
+  new_doc_ext: html
+  templates:
+  - museum  
 - type: directory
   path: _artwork
   label: Artwork
@@ -26,12 +28,6 @@ sections:
   new_doc_ext: html
   templates:
   - artwork
-- type: jekyll-pages
-  label: Pages
-  create: all
-- type: jekyll-posts
-  label: Posts
-  create: all
 upload_dir: ''
 public_path: https://res.cloudinary.com/frank-romero/image/upload
 front_matter_path: ''

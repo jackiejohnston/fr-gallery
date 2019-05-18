@@ -38,6 +38,10 @@ collections:
   artwork:
     output: true
     permalink: /artwork/:slug
+  museums:
+    output: false
+  galleries:
+    output: false  
 
 sass:
   style: compressed

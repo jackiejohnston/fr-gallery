@@ -9,8 +9,10 @@ layout: default
           {% if page.availability == "Private collection" %}
             In the private collection of {{ page.private_collection}}.
           {% elsif page.availability == "Permanent museum collection" %} 
-            {% assign museum = site.data.museums.museums[page.museum_collection] %}
-            In the permanent collection of the <a href="{{ museum.website }}" target="_blank">{{ page.museum_collection }}</a>. 
+            {% assign sorted-museums = site.museums | where: "title", page.museum_collection %}
+            {% for museum in sorted-museums limit: 1 %}
+              In the permanent collection of the <a href="{{ museum.website }}" target="_blank">{{ page.museum_collection }}</a>. 
+            {% endfor %}
           {% endif %}
         </p>
         <p class="text-muted small mb-0">{{ page.note }}</p>
