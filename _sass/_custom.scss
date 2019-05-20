@@ -9,6 +9,7 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 700;
 }
 
-.bg-dark { background-color: black !important; }
-
+.bg-warning { background-color: #fcf2a6 !important; }
+.bg-info { background-color: #8cccc9 !important; }
 a { color: #08498f; }
+.navbar-light .navbar-nav .nav-link { color: black !important; }
