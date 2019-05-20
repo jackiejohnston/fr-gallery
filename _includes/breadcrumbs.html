@@ -1,0 +1,13 @@
+{% unless page.title == "Homepage" %}
+<div id="breadcrumbs" class="container-fluid d-none d-md-block small pl-0">
+  <nav class="navbar navbar-expand-sm navbar-light p-0">
+    <a class="ml-3 p-2" href="{{ '/' | relative_url }}">Home</a>
+    {% if page.collection == "artwork" %}
+      <span class="mx-1">/</span>
+      <a class="p-2" href="{{ '/artwork/' | relative_url }}">Art</a>
+    {% endif %}
+    <span class="mx-1">/</span>
+    <span class="p-2">{{ page.title }}</span>
+  </nav>
+</div>
+{% endunless %}

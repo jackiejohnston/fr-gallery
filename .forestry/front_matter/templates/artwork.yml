@@ -9,13 +9,13 @@ fields:
   label: Layout
   hidden: true
   default: art
-- name: slug
+- name: name
   type: text
   config:
     required: false
-  label: Slug
+  label: name
   hidden: true
-  description: Add slug if title contains special characters
+  description: Add name if title contains special characters
 - name: image
   type: file
   config:

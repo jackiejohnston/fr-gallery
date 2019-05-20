@@ -1,25 +1,57 @@
 ---
 layout: default
 ---
-  <div class="container my-5">
-    <div class="row">
-      <div class="col-md-6 col-lg-8 text-center mb-3">
-        <img class="img-fluid shadow mb-1" src="{{ page.image }}" alt="{{ page.title }}">
-        <p class="text-muted small mb-0"> &copy; {{ page.year }} Frank Romero, {{ page.media }}, {{ page.height}} x {{ page.width }} inches.
-          {% if page.availability == "Private collection" %}
-            In the private collection of {{ page.private_collection}}.
-          {% elsif page.availability == "Permanent museum collection" %} 
-            {% assign sorted-museums = site.museums | where: "title", page.museum_collection %}
-            {% for museum in sorted-museums limit: 1 %}
-              In the permanent collection of the <a href="{{ museum.website }}" target="_blank">{{ page.museum_collection }}</a>. 
-            {% endfor %}
-          {% endif %}
-        </p>
-        <p class="text-muted small mb-0">{{ page.note }}</p>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <h1 class="text-center">{{ page.title }}</h1>
-        <p class="mt-3">{{ page.description}}</p>
+{% capture the_collection %}{{page.collection}}{% endcapture %}
+{% if page.collection %}
+  {% assign  document = site[the_collection]  %}
+{% endif %}
+{% for links in document  %}
+  {% if links.title == page.title %}
+    {% unless forloop.first %}
+      {% assign prevurl = prev.url %}
+    {% endunless %}
+    {% unless forloop.last %}
+      {% assign next = document[forloop.index] %}
+      {% assign nexturl = next.url %}
+    {% endunless %}
+  {% endif %}
+  {% assign prev = links %}
+{% endfor %}
+<script>
+  document.body.onkeyup = function(e){
+    if (e.keyCode == '37') { window.location = '{{prevurl}}'; }
+    if (e.keyCode == '39') { window.location = '{{nexturl}}'; }
+  };
+</script>
+<div class="container my-5">
+  <div class="row">
+    <div class="col-1 pt-5">
+      {% if prevurl %}<a href="{{prevurl}}" class="mt-5"><i class="fas fa-chevron-left fa-2x"></i><span class="sr-only">Click to go the previous artwork</span></a>{% endif %}
+    </div>
+    <div class="col-10">
+      <div class="row">
+        <div class="col-lg-8 text-center mb-3">
+          <img class="img-fluid shadow mb-1" src="{{ page.image }}" alt="{{ page.title }}">
+          <p class="text-muted small mb-0"> &copy; {{ page.year }} Frank Romero, {{ page.media }}, {{ page.height}} x {{ page.width }} inches.
+            {% if page.availability == "Private collection" %}
+              In the private collection of {{ page.private_collection}}.
+            {% elsif page.availability == "Permanent museum collection" %} 
+              {% assign sorted-museums = site.museums | where: "title", page.museum_collection %}
+              {% for museum in sorted-museums limit: 1 %}
+                In the permanent collection of the <a href="{{ museum.website }}" target="_blank">{{ page.museum_collection }}</a>. 
+              {% endfor %}
+            {% endif %}
+          </p>
+          <p class="text-muted small mb-0">{{ page.note }}</p>
+        </div>
+        <div class="col-lg-4">
+          <h1 class="text-center">{{ page.title }}</h1>
+          <p class="mt-3">{{ page.description}}</p>
+        </div>
       </div>
     </div>
+    <div class="col-1 pt-5">
+      {% if nexturl %}<a href="{{nexturl}}" class="mt-5"><i class="fas fa-chevron-right fa-2x" aria-hidden="true"></i><span class="sr-only">Click to go to the next artwork</span></a>{% endif %}
+    </div>
   </div>
+</div>
